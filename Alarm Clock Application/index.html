@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alarm Clock Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Alarm Clock</h1>
+      <p>Mobile-friendly alarm app. Open this page on your phone to use it from mobile.</p>
+    </header>
+
+    <section class="clock-card">
+      <div class="time-display" id="currentTime">00:00:00</div>
+      <div class="date-display" id="currentDate">Loading date...</div>
+    </section>
+
+    <section class="alarm-card">
+      <h2>Set New Alarm</h2>
+      <form id="alarmForm">
+        <label>
+          Alarm time
+          <input type="time" id="alarmTime" required />
+        </label>
+        <label>
+          Alarm label
+          <input type="text" id="alarmLabel" placeholder="e.g. Wake up" />
+        </label>
+        <div class="buttons-row">
+          <button type="submit">Set Alarm</button>
+          <button type="button" id="clearAlarm">Clear</button>
+          <button type="button" id="enableSound">Tap to Enable Sound</button>
+        </div>
+      </form>
+      <div class="alarm-status" id="alarmStatus">No active alarm.</div>
+      <p class="sound-notice" id="soundNotice">Tap "Enable Sound" once on mobile so the alarm can play.</p>
+    </section>
+
+    <section class="mobile-card">
+      <h2>Mobile Connect</h2>
+      <p>
+        To use from your phone, open this file from a local server and navigate to the same IP address on your mobile browser.
+      </p>
+      <ul>
+        <li>Install <code>Live Server</code> or run a local HTTP server.</li>
+        <li>Use a phone on the same Wi-Fi network.</li>
+        <li>Open <code>http://YOUR-PC-IP:8000</code> or the port your server uses.</li>
+      </ul>
+      <p class="tips">Tip: Keep the page open on mobile, make sure the phone volume is on, and tap the sound button before setting the alarm.</p>
+    </section>
+  </div>
+
+  <audio id="alarmAudio" preload="auto">
+    <source src="" type="audio/wav" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>

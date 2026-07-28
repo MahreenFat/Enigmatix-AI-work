@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinosaur Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <div class="panel card">
+      <header class="header-bar">
+        <div>
+          <p class="eyebrow">Chrome Dino</p>
+          <h1>Run &amp; Jump</h1>
+        </div>
+        <div class="top-stats">
+          <div class="stat-chip">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-chip">
+            <span>Level</span>
+            <strong id="level">1</strong>
+          </div>
+          <div class="stat-chip">
+            <span>Best</span>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="800" height="250"></canvas>
+        <div class="overlay" id="overlayText">Press Space or Tap to start</div>
+      </div>
+
+      <div class="controls-row">
+        <button id="startButton" class="primary">Start</button>
+        <button id="pauseButton" class="secondary" disabled>Pause</button>
+        <button id="restartButton" class="secondary">Restart</button>
+      </div>
+
+      <div class="status-bar">
+        <span id="statusText">Use Space / Up to jump, Down to duck.</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

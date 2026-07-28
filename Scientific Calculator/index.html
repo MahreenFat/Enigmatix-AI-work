@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document metadata and external styles -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern responsive scientific calculator" />
+  <title>Scientific Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main calculator card -->
+  <main class="calculator" aria-label="Scientific calculator">
+    <!-- Brand and angle-mode controls -->
+    <header class="calculator__header">
+      <div><p class="eyebrow">ENIGMATIX</p><h1>Scientific</h1></div>
+      <button class="mode-toggle" id="angleMode" type="button" aria-label="Change angle mode">DEG</button>
+    </header>
+
+    <!-- Current expression and answer -->
+    <section class="display" aria-live="polite">
+      <output class="display__expression" id="expression">0</output>
+      <output class="display__result" id="result">0</output>
+    </section>
+
+    <!-- Calculation history, with selectable previous answers -->
+    <section class="history" aria-label="Calculation history">
+      <div class="history__heading"><span>History</span><button id="clearHistory" type="button">Clear</button></div>
+      <ol class="history__list" id="historyList"><li class="history__empty">Your calculations will appear here.</li></ol>
+    </section>
+
+    <!-- Scientific and standard keypad -->
+    <section class="keypad" id="keypad" aria-label="Calculator keys">
+      <!-- Scientific function keys -->
+      <button data-value="sin(" class="key key--function">sin</button><button data-value="cos(" class="key key--function">cos</button><button data-value="tan(" class="key key--function">tan</button><button data-value="log(" class="key key--function">log</button>
+      <button data-value="ln(" class="key key--function">ln</button><button data-value="sqrt(" class="key key--function">&radic;</button><button data-value="^2" class="key key--function">x&sup2;</button><button data-value="^3" class="key key--function">x&sup3;</button>
+      <button data-value="^" class="key key--function">x<sup>y</sup></button><button data-value="PI" class="key key--function">&pi;</button><button data-value="e" class="key key--function">e</button><button data-value="!" class="key key--function">n!</button>
+      <button data-value="abs(" class="key key--function">|x|</button><button data-value="(" class="key key--function">(</button><button data-value=")" class="key key--function">)</button>
+
+      <!-- Editing and arithmetic keys -->
+      <button data-action="clear" class="key key--clear">AC</button><button data-action="delete" class="key key--clear">DEL</button><button data-value="%" class="key key--operator">%</button><button data-value="/" class="key key--operator">&divide;</button>
+      <button data-value="7" class="key">7</button><button data-value="8" class="key">8</button><button data-value="9" class="key">9</button><button data-value="*" class="key key--operator">&times;</button>
+      <button data-value="4" class="key">4</button><button data-value="5" class="key">5</button><button data-value="6" class="key">6</button><button data-value="-" class="key key--operator">-</button>
+      <button data-value="1" class="key">1</button><button data-value="2" class="key">2</button><button data-value="3" class="key">3</button><button data-value="+" class="key key--operator">+</button>
+      <button data-value="0" class="key key--zero">0</button><button data-value="." class="key">.</button><button data-action="equals" class="key key--equals">=</button>
+    </section>
+  </main>
+
+  <!-- Calculator behavior -->
+  <script src="script.js"></script>
+</body>
+</html>
