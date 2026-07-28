@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Forest Chase</p>
+          <h1>Real Snake</h1>
+        </div>
+        <button id="startBtn">Start Game</button>
+      </header>
+
+      <main class="game-area">
+        <section class="stats-card">
+          <div class="stat">
+            <span>Score</span>
+            <strong id="scoreValue">0</strong>
+          </div>
+          <div class="stat">
+            <span>Best</span>
+            <strong id="bestValue">0</strong>
+          </div>
+          <div class="stat">
+            <span>Level</span>
+            <strong id="levelValue">1/5</strong>
+          </div>
+        </section>
+
+        <section class="board-card">
+          <canvas id="gameCanvas" width="480" height="480"></canvas>
+          <div id="overlay" class="overlay visible">
+            <h2 id="overlayTitle">Ready to play?</h2>
+            <p id="overlayMessage">Use arrow keys or WASD to guide the snake.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
