@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <h2>📚 Library</h2>
+
+
+    <ul>
+
+        <li>
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+
+        <li>
+            <i class="fa-solid fa-book"></i>
+            Books
+        </li>
+
+
+        <li>
+            <i class="fa-solid fa-user-graduate"></i>
+            Students
+        </li>
+
+
+        <li>
+            <i class="fa-solid fa-book-open"></i>
+            Issue Book
+        </li>
+
+
+        <li>
+            <i class="fa-solid fa-rotate-left"></i>
+            Return Book
+        </li>
+
+
+        <li>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+
+    </ul>
+
+
+</div>
+
+
+
+
+<!-- Main Content -->
+
+<div class="main">
+
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+
+        <h1>
+            📚 Library Dashboard
+        </h1>
+
+
+        <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search Book..."
+        onkeyup="searchBook()">
+
+
+    </div>
+
+
+
+
+    <!-- Cards -->
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h2 id="totalBooks">
+                0
+            </h2>
+
+            <p>
+                Total Books
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>
+                0
+            </h2>
+
+            <p>
+                Students
+            </p>
+
+        </div>
+
+
+
+
+        <div class="card">
+
+            <h2>
+                0
+            </h2>
+
+            <p>
+                Issued
+            </p>
+
+        </div>
+
+
+
+
+        <div class="card">
+
+            <h2>
+                0
+            </h2>
+
+            <p>
+                Returned
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Add Book Section -->
+
+
+    <div class="table-box">
+
+
+        <h2>
+            ➕ Add New Book
+        </h2>
+
+
+
+        <br>
+
+
+        <input 
+        type="text"
+        id="title"
+        placeholder="Book Title">
+
+
+
+        <input 
+        type="text"
+        id="author"
+        placeholder="Author Name">
+
+
+
+        <input 
+        type="text"
+        id="category"
+        placeholder="Category">
+
+
+
+        <input 
+        type="number"
+        id="quantity"
+        placeholder="Quantity">
+
+
+
+        <br><br>
+
+
+
+        <button onclick="addBook()">
+
+            ➕ Add Book
+
+        </button>
+
+
+
+    </div>
+
+
+
+
+    <br>
+
+
+
+    <!-- Books Table -->
+
+
+    <div class="table-box">
+
+
+        <div class="table-header">
+
+
+            <h2>
+                📚 Books List
+            </h2>
+
+
+
+            <button onclick="loadBooks()">
+
+                🔄 Refresh
+
+            </button>
+
+
+
+        </div>
+
+
+
+
+
+        <table>
+
+
+            <thead>
+
+
+                <tr>
+
+
+                    <th>
+                        ID
+                    </th>
+
+
+                    <th>
+                        Title
+                    </th>
+
+
+                    <th>
+                        Author
+                    </th>
+
+
+                    <th>
+                        Category
+                    </th>
+
+
+                    <th>
+                        Quantity
+                    </th>
+
+
+                    <th>
+                        Action
+                    </th>
+
+
+                </tr>
+
+
+            </thead>
+
+
+
+
+            <tbody id="bookTable">
+
+
+            </tbody>
+
+
+
+
+        </table>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+<script src="./app.js"></script>
+
+
+</body>
+
+
+</html>
